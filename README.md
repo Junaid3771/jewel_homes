@@ -2,6 +2,14 @@
 
 A complete static multi-page redesign using Jewel Homes' published content and imagery exclusively. The site contains 140 HTML pages, 29 residence pages, original project floor plans, amenities, specifications, locations, published availability, services, galleries, videos, calculators, company profile, client stories, contact, careers and privacy pages.
 
+## Deploy to Vercel
+
+Import **Junaid3771/jewel_homes** at [vercel.com/new](https://vercel.com/new), keep the repository root and `main` branch, and click **Deploy**. `vercel.json` sets the framework to **Other**, runs the dependency-free preparation step, and publishes `dist/`. No environment variables are required.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FJunaid3771%2Fjewel_homes)
+
+The button creates a repository copy. Import the existing repository instead to keep automatic deployments connected to this same `main` branch. See [DEPLOYMENT.md](DEPLOYMENT.md) for settings, custom domains and optional CLI instructions.
+
 ## Run
 
 From this directory:

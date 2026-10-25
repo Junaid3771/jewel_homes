@@ -1,0 +1,10 @@
+{
+  "name": "jewel-homes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Jewel Homes multi-page website, ready for static hosting on Vercel.",
+  "scripts": {
+    "build": "node scripts/prepare-vercel.mjs",
+    "check": "node scripts/prepare-vercel.mjs --check-only"
+  }
+}
