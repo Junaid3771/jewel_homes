@@ -1,6 +1,6 @@
 # jewel_homes
 
-A complete static multi-page redesign using Jewel Homes' published content and imagery exclusively. The site contains 140 HTML pages, 29 residence pages, original project floor plans, amenities, specifications, locations, published availability, services, galleries, videos, calculators, company profile, client stories, contact, careers and privacy pages.
+A complete static multi-page redesign using Jewel Homes' published content and imagery. The site contains 141 HTML pages, 29 residence pages, original project floor plans, amenities, specifications, locations, published availability, services, galleries, videos, calculators, company profile, client stories, contact, careers and privacy pages, plus newly authored building and furnished apartment reconstructions.
 
 ## Deploy to Vercel
 
@@ -41,7 +41,17 @@ The models are architectural reconstructions based on published elevations, not 
 
 Three.js 0.180.0, OrbitControls and RoomEnvironment are vendored in `dist/vendor/three/` with their MIT license. No CDN connection or new package installation is needed for the 3D engine. Instanced geometry, capped rendering resolution, lazy homepage initialization and offscreen/hidden-tab rendering suspension keep the viewer lightweight. Reduced-motion settings disable automatic rotation.
 
-## Enquiries
+## Furnished apartment interiors
+
+From the building explorer, select a level, choose a project layout, and click **Enter this apartment in 3D**. The `apartment-interior.html` experience includes living and dining spaces, a kitchen, bedrooms, bathrooms, a balcony, and a utility space in the three-bedroom study. Use the room navigation or in-scene hotspots to move between spaces, drag to look around, and use WASD for constrained movement. **3D floor plan** switches to a furnished dollhouse view with orbit and zoom. The original Jewel drawing remains available alongside the selected layout.
+
+URL parameters preserve the selected project, layout index, and illustrative building level. Layout selection reuses the same renderer to avoid repeatedly creating GPU contexts. Furniture and wall geometry is instanced, rendering resolution is capped, and offscreen/hidden previews suspend rendering.
+
+The furnishings, room geometry, finishes, and scenic window backdrop are design studies rather than surveyed/as-built interiors or verified apartment views. The spatial configurations are based on published Jewel Capital two- and three-bedroom references; other selected project layouts use the corresponding bedroom-count study, with their original project drawing available for comparison. No apartment numbers or live unit availability are invented.
+
+All photographic references and the scenic backdrop are from the original Jewel website. Furniture geometry and procedural material textures are authored locally in `dist/apartment3d.js`; the interface is in `dist/interior-experience.js` and the revised palette and layout are in `dist/atelier.css`. The homepage includes a live furnished 3D preview and a direct interior-tour entry point.
+
+## Enquiry delivery
 
 The enquiry form validates fields and creates a copyable email draft addressed to sales@jewelhomes.net. It opens the visitor's email app only when they choose that action. It does not silently submit or store leads and does not display an unsent message as delivered. Backend lead delivery requires a separately configured mail or CRM integration.
 
@@ -53,7 +63,9 @@ Project categories and published availability are source information, not a live
 
 ## Verification
 
-All 140 HTML pages were checked for local link and asset references. Representative desktop and mobile layouts were inspected in the browser. Navigation, directory filtering, explorer hotspots and residence switching, floor-plan image enlargement, and calculator behavior were verified. The EMI calculator was checked with a zero-interest reference case of ₹12,000 over 12 months, producing ₹1,000 monthly with zero interest.
+All 141 HTML pages are checked for local link and asset references by `npm run check`. Representative desktop and mobile layouts were inspected in the browser. Navigation, directory filtering, explorer hotspots and residence switching, floor-plan image enlargement, and calculator behavior were verified. The EMI calculator was checked with a zero-interest reference case of ₹12,000 over 12 months, producing ₹1,000 monthly with zero interest.
 
 The real 3D update was verified in the browser on desktop and a narrow mobile viewport: manual orbit changes the camera orientation, direct geometry clicks select a level and open its plan panel, the layout filter selects the matching source drawings, original plans enlarge, the three residence models switch, evening mode updates the lighting, and the homepage live 3D preview initializes when scrolled into view.
+
+The apartment interior journey was verified from building level selection through a two-bedroom layout into the matching interior page, preserving project, layout and study-level context. Room navigation, furnished dollhouse mode, the three-bedroom study (including its additional bathrooms and utility space), and evening lighting were also checked in the browser.
 
