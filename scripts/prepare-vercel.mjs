@@ -12,7 +12,7 @@ if (sourceOrigin && !['https:', 'http:'].includes(sourceOrigin.protocol)) {
 }
 const origin = sourceOrigin?.origin;
 const files = (await readdir(output)).filter(file => file.endsWith('.html')).sort();
-for (const required of ['index.html', '404.html', 'site.css', 'site.js', 'properties.json', 'hero-data.json', 'spatial.css', 'viewer3d.js', 'building3d.js', 'apartment-interior.html', 'apartment3d.js', 'interior-experience.js', 'atelier.css', 'vendor/three/three.module.min.js', 'vendor/three/three.core.min.js', 'vendor/three/OrbitControls.js', 'vendor/three/RoomEnvironment.js', 'vendor/three/LICENSE']) {
+for (const required of ['index.html', '404.html', 'site.css', 'site.js', 'properties.json', 'hero-data.json', 'spatial.css', 'viewer3d.js', 'building3d.js', 'apartment-interior.html', 'apartment3d.js', 'interior-experience.js', 'atelier.css', 'mobile.css', 'vendor/three/three.module.min.js', 'vendor/three/three.core.min.js', 'vendor/three/OrbitControls.js', 'vendor/three/RoomEnvironment.js', 'vendor/three/LICENSE']) {
   await stat(path.join(output, required));
 }
 if (!files.length) throw new Error('No website pages found in dist/.');

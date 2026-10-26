@@ -69,3 +69,9 @@ The real 3D update was verified in the browser on desktop and a narrow mobile vi
 
 The apartment interior journey was verified from building level selection through a two-bedroom layout into the matching interior page, preserving project, layout and study-level context. Room navigation, furnished dollhouse mode, the three-bedroom study (including its additional bathrooms and utility space), and evening lighting were also checked in the browser.
 
+
+## Mobile layouts
+
+`dist/mobile.css` is loaded last on every generated page. Phone and tablet layouts use readable copy, 16px form inputs, a sticky navigation header, stacked forms, scrollable project navigation and source tables, and larger 3D controls. Homepage 3D previews permit vertical touch scrolling; the dedicated tours retain their interactive camera controls.
+
+Browser review on 26 October 2026 rendered all 141 pages at 320px, 390px, 430px and 768px (564 page/viewport checks). The final reports found no document overflow, clipped headings, audited main text below 12px, or audited controls below 43px in height. This is a browser viewport review, not a physical-device certification. Navigation, residence search, original-plan enlargement, enquiry draft preparation, all three calculators, building-level selection, apartment entry, room navigation and dollhouse mode were also exercised at phone width. `npm run check` and `npm run build` validate all 141 pages and their local asset/link references.
