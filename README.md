@@ -31,11 +31,15 @@ python build_site.py
 
 Styling and interactions are maintained in `dist/site.css` and `dist/site.js`. Generation preserves those files and the `dist/media/` asset collection.
 
-## Property explorer
+## Real 3D property explorer
 
-The property explorer presents original Jewel architectural elevations with zoom, pan, image enlargement, residence selection and clickable hotspots opening the actual project plans and details. These hotspots identify information categories; they are not mapped apartment boundaries or a live apartment inventory.
+Open `property-explorer.html` for a real WebGL viewer with complete 360-degree rotation, damped touch/mouse orbit controls, zoom, selectable levels, daylight/evening lighting, fullscreen viewing, residence selection and original floor-plan drawings. A live interactive 3D preview also appears on the homepage, and an "Explore the residences in 3D" link is visible in the hero.
 
-The source website does not publish a 3D building model, a full set of orbit frames, or a panoramic 360-degree tour. The current viewer therefore does not claim 360-degree rotation. A faithful 360-degree viewer requires the original authorized building model or a full rendered image sequence.
+Three reconstructed building studies are included: Jewel Capital, Jewel Pristine Greens and Jewel Radius. Their geometry is created locally in `dist/building3d.js`; their interface and data integration live in `dist/viewer3d.js` and `dist/spatial.css`. The original project photographs and plans remain available.
+
+The models are architectural reconstructions based on published elevations, not original surveyed/CAD models. Unseen façades, dimensions, landscaping and level positions are illustrative. Selecting a level opens original project plan types; it does not assign a plan to that floor or claim live apartment availability. A short disclosure and a link to the original elevation appear in the viewer.
+
+Three.js 0.180.0, OrbitControls and RoomEnvironment are vendored in `dist/vendor/three/` with their MIT license. No CDN connection or new package installation is needed for the 3D engine. Instanced geometry, capped rendering resolution, lazy homepage initialization and offscreen/hidden-tab rendering suspension keep the viewer lightweight. Reduced-motion settings disable automatic rotation.
 
 ## Enquiries
 
@@ -43,11 +47,13 @@ The enquiry form validates fields and creates a copyable email draft addressed t
 
 ## Content and assets
 
-All property imagery, interior photos, project plans, source videos, logos and substantive company/project content come from https://www.jewelhomes.net/. Content was collected on 25 October 2026. Source URLs are retained in content.json. Some original brochure PDF paths return HTML instead of a document; those links become clear brochure requests. The original News & Events endpoint was unavailable; the redesigned news page links to the original office inauguration photographs instead.
+All property imagery, interior photos, project plans, source videos, logos and substantive company/project content come from https://www.jewelhomes.net/. The 3D reconstruction geometry is newly authored from those visual references. Content was collected on 25 October 2026. Source URLs are retained in content.json. Some original brochure PDF paths return HTML instead of a document; those links become clear brochure requests. The original News & Events endpoint was unavailable; the redesigned news page links to the original office inauguration photographs instead.
 
 Project categories and published availability are source information, not a live guarantee. Sales enquiries go to the original Jewel Homes contact details.
 
 ## Verification
 
 All 140 HTML pages were checked for local link and asset references. Representative desktop and mobile layouts were inspected in the browser. Navigation, directory filtering, explorer hotspots and residence switching, floor-plan image enlargement, and calculator behavior were verified. The EMI calculator was checked with a zero-interest reference case of ₹12,000 over 12 months, producing ₹1,000 monthly with zero interest.
+
+The real 3D update was verified in the browser on desktop and a narrow mobile viewport: manual orbit changes the camera orientation, direct geometry clicks select a level and open its plan panel, the layout filter selects the matching source drawings, original plans enlarge, the three residence models switch, evening mode updates the lighting, and the homepage live 3D preview initializes when scrolled into view.
 

@@ -46,6 +46,6 @@ The prebuilt website lives in `dist/`. Edit `dist/site.css` and `dist/site.js` d
 
 ## Existing feature scope
 
-The enquiry form prepares an email draft; it is not connected to a mail or CRM backend. The property explorer shows original project elevations and floor plans; true 360-degree rotation still requires Jewel's original model or angle sequence. Hosting on Vercel does not change these behaviors.
+The enquiry form prepares an email draft; it is not connected to a mail or CRM backend. The property explorer now renders real, rotatable WebGL reconstructions of Jewel Capital, Jewel Pristine Greens and Jewel Radius, with selectable levels, lighting controls and original project plans. These models are illustrative reconstructions from published elevations, not surveyed/CAD models. The viewer's JavaScript engine and license are included locally under `dist/vendor/three/`, so Vercel serves it with the rest of the site without a CDN dependency or build installation.
 
 References: https://vercel.com/docs/project-configuration/vercel-json and https://vercel.com/docs/environment-variables/system-environment-variables.
